@@ -10,133 +10,149 @@ body{
   position: absolute;
   padding: 0;
   margin: 0;
+     height: 1788px;
   top: 0;
   left: 0;
 }
-
 #overall_mask{
   position: absolute;
-  height: 1920px;
+  height: 1788px;
   width: 1080px;
   top: 0px;
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: 4;
+  z-index: 0;
 }
-
-#headline1{
+#main{
   position: absolute;
   z-index: 1;
+     height: 1788px;
+  width: 1080px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 #mainBanner{
   position: absolute;
   z-index: 1;
+     height: 1788px;
+  width: 1080px;
   overflow-x: hidden;
-    margin-top: 132px;
+  overflow-y: hidden;   
 }
-#headline1,#headline2, #headline3,#headline33,#headline5,
-#headline7,#headline8,#headline10,#headline11,#headline12,
-#isi,#BottomBar,#BottomBar1{
-    margin-top: 132px;
+#mainBanner1{
+  position: absolute;
+  z-index: 1;
+     height: 1788px;
+  width: 1080px;
+ overflow-x: hidden;
+  overflow-y: hidden;
+    opacity: 0;
+}
+#headline1{
+  position: absolute;
+  z-index: 2;
+    top:1100px;
+    left: 30px;
 }
 #headline2{
   position: absolute;
   z-index: 2;
+      top:1100px;
+    left: 30px;
 }
 #headline3{
   position: absolute;
-  z-index: 3;
+  z-index: 2;
+      top:1100px;
+    left: 30px;
 }
-#headline33{
+#headline4{
   position: absolute;
-  z-index: 3;
+  z-index: 2;
+     top:300px;
+    left: 570px;
 }
 #headline5{
   position: absolute;
-  z-index: 3;
+  z-index: 2;
+top:400px;
+    left: 600px;
 }
-#headline7{
+
+#offer{
   position: absolute;
-  z-index: 3;
+  z-index: 2;
+top:50px;
+  right: -1080px;    
 }
-#headline8{
+
+#cta{
   position: absolute;
-  z-index: 3;
-}
-#headline10{
-  position: absolute;
-  z-index: 4;
-}
-#headline11{
-  position: absolute;
-  z-index: 3;
-}
-#headline12{
-  position: absolute;
-  z-index: 3;
+  z-index: 2;
+    top:980px;
 }
 #BottomBar{
   position: absolute;
   z-index: 6;
     width: 1080px;
-    top:1218px;
+    top:1200px;
 }
 #BottomBar1{
   position: absolute;
   z-index: 2;
     width: 1080px;
-    top:1218px;
+    top:1200px;
     opacity: 0;
 }
 #pi{
   position: absolute;
-  z-index: 5;
-  top: 1595px;
-  left: 30px;
-  width: 370px;
-  height: 80px;
+  z-index: 6;
+  top: 1566px;
+  left: 52px;
+  width: 455px;
+  height: 110px;
 }
 #ppi{
   position: absolute;
-  z-index: 5;
-  top: 1595px;
-  left: 430px;
-  width: 370px;
-  height: 80px;
+  z-index: 6;
+  top: 1566px;
+  left: 552px;
+  width: 455px;
+  height: 110px;
 }
 #pi1{
   position: absolute;
-  z-index: 5;
-  top: 945px;
-  left: 30px;
-  width: 370px;
-  height: 80px;
+  z-index: 11;
+  top: 1660px;
+  left: 52px;
+  width: 455px;
+  height: 110px;
 }
 #ppi1{
   position: absolute;
-  z-index: 5;
-  top: 945px;
-  left: 430px;
-  width: 370px;
-  height: 80px;
+  z-index: 11;
+  top: 1660px;
+  left: 552px;
+  width: 455px;
+  height: 110px;
 }
 /* Start-of-the-ISI */
 #isi_image{
   position: absolute;
-     z-index: 1;
-    left: 10px;
+margin-top: 30px;
+     z-index: 3;
 }
 #isi{
   position: absolute;
   background-color: white;
-  top: 1250px;
+  top: 1230px;
   width: 1080px;
   height: 566px;
   font-size: 11px;
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Arial-Narrow";
+     z-index: 3;
   
 }
 #isi::-webkit-scrollbar {

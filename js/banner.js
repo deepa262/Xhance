@@ -1,28 +1,30 @@
  $(function(){
- 
-  $("#pi").on("click", function(){
+  // WebViewCommunicator.sendJavascriptTo("main", "javascript:appRouter.homeView.flashAdImpressionTrack('banner-ad')");
+  // WebViewCommunicator.sendJavascriptTo("main", "javascript:appRouter.homeView.idleSlideTimeSeconds(20)");
+
+   $("#pi").on("click", function(){
     console.log("pi button clicked");
-          window.open("https://www.xhance.com/files/XHANCE_Patient_Information.pdf");
+          window.open("http://radiuspharm.com/wp-content/uploads/tymlos/");
      WebViewCommunicator.sendJavascriptTo("main", "javascript:appRouter.homeView.openChildBrowser('https://www.xhance.com/files/XHANCE_Patient_Information.pdf', '<div data-advtype=Prescribing-Information/>', 'timeoutMinutes: 2.5')");
 
   });
      
       $("#ppi").on("click", function(){
     console.log("pi button clicked");
-              window.open("https://www.xhance.com/files/XHANCE_Instructions_for_Use.pdf");
+              window.open("http://radiuspharm.com/wp-content/uploads/");
      WebViewCommunicator.sendJavascriptTo("main", "javascript:appRouter.homeView.openChildBrowser('https://www.xhance.com/files/XHANCE_Instructions_for_Use.pdf', '<div data-advtype=Prescribing-Information/>', 'timeoutMinutes: 2.5')");
 
   });
        $("#pi1").on("click", function(){
     console.log("pi button clicked");
-          window.open("https://www.xhance.com/files/XHANCE_Patient_Information.pdf");
+          window.open("http://radiuspharm.com/wp-content/uploads/tymlos/");
      WebViewCommunicator.sendJavascriptTo("main", "javascript:appRouter.homeView.openChildBrowser('https://www.xhance.com/files/XHANCE_Patient_Information.pdf', '<div data-advtype=Prescribing-Information/>', 'timeoutMinutes: 2.5')");
 
   });
      
       $("#ppi1").on("click", function(){
     console.log("pi button clicked");
-              window.open("https://www.xhance.com/files/XHANCE_Instructions_for_Use.pdf");
+              window.open("http://radiuspharm.com/wp-content/uploads/");
      WebViewCommunicator.sendJavascriptTo("main", "javascript:appRouter.homeView.openChildBrowser('https://www.xhance.com/files/XHANCE_Instructions_for_Use.pdf', '<div data-advtype=Prescribing-Information/>', 'timeoutMinutes: 2.5')");
 
   });
@@ -32,8 +34,8 @@
 
   tl = new TimelineMax({delay: time});
   tl
-   .to(BottomBar1, 1, { width:1080,height:60,top:0,zIndex:8,opacity:1,marginTop:132})
-    .to(isi, 1, { width: 1080,height:1400,top:0,zIndex:7,marginTop:172}, '-=1')
+   .to(BottomBar1, 1, { width:1080,height:60,top:0,zIndex:8,opacity:1})
+    .to(isi, 1, { width: 1080,height:1950,top:0,zIndex:7,marginTop:40}, '-=1')
       .to(BottomBar, 1, { opacity:0}, '-=1')
   });
      $("#BottomBar1").on("click", function Border1Appear(waitTime){
@@ -43,7 +45,7 @@
   tl = new TimelineMax({delay: time});
   tl
   .to(BottomBar1 , 1, {top:1218})
- .to(isi, 1, { width: 1080,height:564,top:1210,zIndex:9,marginTop:132}, '-=1')
+ .to(isi, 1, { width: 1080,height:564,top:1210,zIndex:9}, '-=1')
   .to(BottomBar , 1, { width: 1080,height:40,top:1218,zIndex:10,opacity:1}, '-=1') 
   });
 
@@ -75,22 +77,46 @@ function startScrolling(waitTime){
 
 // Begin non-ISI animation code
 
+function ArmFade(waitTime){
+  var time = waitTime;
+  console.log(time);
+
+  tl = new TimelineMax({delay: time});
+  tl
+  .to(mainBanner, 35, {opacity:0})
+}
+function ArmFade1(waitTime){
+  var time = waitTime;
+  console.log(time);
+
+  tl = new TimelineMax({delay: time});
+  tl
+  .to(mainBanner1, 20, {opacity:1})
+}
+function ArmAppear(waitTime){
+  var time = waitTime;
+  console.log(time);
+
+  tl = new TimelineMax({delay: time});
+  tl
+   .from(mainBanner, 18, {opacity:1,scale:2.3,top:440,left:550})
+}
+function ArmAppear1(waitTime){
+  var time = waitTime;
+  console.log(time);
+
+  tl = new TimelineMax({delay: time});
+  tl
+  .from(mainBanner1, 18, {opacity:0,scale:2.3,top:440,left:550})  
+      
+}
 function headline1Appear(waitTime){
   var time = waitTime;
   console.log(time);
 
   tl = new TimelineMax({delay: time});
   tl
-    .from(headline2, 1, {opacity:0})   
-}
-function headline1disAppear(waitTime){
-  var time = waitTime;
-  console.log(time);
-
-  tl = new TimelineMax({delay: time});
-  tl
-    .to(headline1, 1, {opacity:0})
-     .to(headline2, 1, {opacity:0}, '-=1')
+    .from(headline1, 1, {opacity:0}, '-=0.5')
 }
 function headline2Appear(waitTime){
   var time = waitTime;
@@ -98,18 +124,9 @@ function headline2Appear(waitTime){
 
   tl = new TimelineMax({delay: time});
   tl
-    .from(headline5, 1, {left:1080,opacity:0}, '-=0.5')
-   .from(headline3, 1, {opacity:0})   
-     .from(headline33, 1, {opacity:0}, '-=1')   
-    
-}
-function headline2disAppear(waitTime){
-  var time = waitTime;
-  console.log(time);
-
-  tl = new TimelineMax({delay: time});
-  tl
-     .to(headline3, 1, {opacity:0})
+  
+   .to(headline1, 1, {opacity:0}, '-=0.5')
+    .from(headline2, 1, {opacity:0}, '-=0.5')
 }
 function headline3Appear(waitTime){
   var time = waitTime;
@@ -117,57 +134,52 @@ function headline3Appear(waitTime){
 
   tl = new TimelineMax({delay: time});
   tl
-    .from(headline7, 1, {left:-1080,opacity:0})          
+    .to(headline2, 1, {opacity:0}, '-=0.5')
+    .from(headline3, 1, {opacity:0}, '-=0.5')
 }
-function headline3disAppear(waitTime){
-  var time = waitTime;
-  console.log(time);
 
-  tl = new TimelineMax({delay: time});
-  tl
-     .to(headline7, 1, {opacity:0})
-    .to(headline5, 1, {left:1080,opacity:0}, '-=1')
-}
 function headline4Appear(waitTime){
   var time = waitTime;
   console.log(time);
 
   tl = new TimelineMax({delay: time});
-  tl
-    .from(headline8, 1, {opacity:0})   
-    .from(headline10, 1, {opacity:0}, '-=1')   
+  tl 
+      .to(headline3, 1, {opacity:0}, '-=0.5')
+    .from(isi_image, 1, {opacity:0})
+        .from(isi, 1, {opacity:0}, '-=1')
+     .from(BottomBar, 1, {opacity:0}, '-=1')
+     .from(BottomBar1, 1, {opacity:0}, '-=1')
+     .from(offer, 1, {opacity:0}, '-=1')
+    .from(headline4, 1, {opacity:0}, '+=0.5')
 }
-function headline4disAppear(waitTime){
-  var time = waitTime;
-  console.log(time);
 
-  tl = new TimelineMax({delay: time});
-  tl
-     .to(headline8, 1, {opacity:0})
-     .to(headline33, 1, {opacity:0}, '-=1')   
-}
 function headline5Appear(waitTime){
   var time = waitTime;
   console.log(time);
 
   tl = new TimelineMax({delay: time});
   tl
-   .from(headline11, 1, {opacity:0})   
-    .from(headline12, 1, {opacity:0}, '+=0.5')   
-}
-function animate(){
-   startScrolling(2000);
-    headline1Appear(1);
- headline1disAppear(5);
-    headline2Appear(6);
-    headline2disAppear(9);
-       headline3Appear(10);
-     headline3disAppear(13);
-    headline4Appear(14);
-    headline4disAppear(16);
-    headline5Appear(18);
+   .to(headline4, 1, {opacity:0}, '-=0.5')  
+    .from(headline5, 1, {opacity:0})
+     .from(cta, 2, {opacity:0}, '+=0.5')
 }
 
+function animate(){
+   startScrolling(13000);
+    ArmAppear(0);
+    ArmAppear1(0);
+    ArmFade(4);
+    ArmFade1(2);
+    headline1Appear(2);
+    headline2Appear(4);
+    headline3Appear(7);
+    headline4Appear(11);
+    headline5Appear(17);
+//  isiAppear(10);
+   
+//    ArmZoom(0);
+}
+// End non-ISI animation code
 
 $(document).on("touchstart", "#isi", function(){
  clearInterval(ascroll);
