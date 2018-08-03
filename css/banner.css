@@ -1,0 +1,161 @@
+@media screen and (max-height:1788px) {
+body
+{ margin-top: -132px; }
+
+#overall_mask
+{ margin-top: -132px; }
+
+}
+body{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+#overall_mask{
+  position: absolute;
+  height: 1920px;
+  width: 1080px;
+  top: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 4;
+}
+
+#headline1{
+  position: absolute;
+  z-index: 1;
+  overflow-x: hidden;
+}
+#mainBanner{
+  position: absolute;
+  z-index: 1;
+  overflow-x: hidden;
+    margin-top: 132px;
+}
+#headline1,#headline2, #headline3,#headline33,#headline5,
+#headline7,#headline8,#headline10,#headline11,#headline12,
+#isi,#BottomBar,#BottomBar1{
+    margin-top: 132px;
+}
+#headline2{
+  position: absolute;
+  z-index: 2;
+}
+#headline3{
+  position: absolute;
+  z-index: 3;
+}
+#headline33{
+  position: absolute;
+  z-index: 3;
+}
+#headline5{
+  position: absolute;
+  z-index: 3;
+}
+#headline7{
+  position: absolute;
+  z-index: 3;
+}
+#headline8{
+  position: absolute;
+  z-index: 3;
+}
+#headline10{
+  position: absolute;
+  z-index: 4;
+}
+#headline11{
+  position: absolute;
+  z-index: 3;
+}
+#headline12{
+  position: absolute;
+  z-index: 3;
+}
+#BottomBar{
+  position: absolute;
+  z-index: 6;
+    width: 1080px;
+    top:1218px;
+}
+#BottomBar1{
+  position: absolute;
+  z-index: 2;
+    width: 1080px;
+    top:1218px;
+    opacity: 0;
+}
+#pi{
+  position: absolute;
+  z-index: 5;
+  top: 1595px;
+  left: 30px;
+  width: 370px;
+  height: 80px;
+}
+#ppi{
+  position: absolute;
+  z-index: 5;
+  top: 1595px;
+  left: 430px;
+  width: 370px;
+  height: 80px;
+}
+#pi1{
+  position: absolute;
+  z-index: 5;
+  top: 945px;
+  left: 30px;
+  width: 370px;
+  height: 80px;
+}
+#ppi1{
+  position: absolute;
+  z-index: 5;
+  top: 945px;
+  left: 430px;
+  width: 370px;
+  height: 80px;
+}
+/* Start-of-the-ISI */
+#isi_image{
+  position: absolute;
+     z-index: 1;
+    left: 10px;
+}
+#isi{
+  position: absolute;
+  background-color: white;
+  top: 1250px;
+  width: 1080px;
+  height: 566px;
+  font-size: 11px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "Arial-Narrow";
+  
+}
+#isi::-webkit-scrollbar {
+  width: 30px;
+  margin-top: 10px;
+}
+
+#isi::-webkit-scrollbar-track {
+  border: 1px solid #d7d7d7;
+  border-radius: 7px;
+}
+
+#isi::-webkit-scrollbar-thumb {
+  height: 75px;
+  background-color: #d7d7d7;
+  background-position: top;
+  background-repeat: no-repeat;
+  border: 3px solid transparent;
+  border-radius: 7px;
+  background-clip: content-box;
+}
+/* End-of-the-ISI */
